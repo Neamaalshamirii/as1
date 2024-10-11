@@ -1,0 +1,84 @@
+body{
+    font-family: cursive;
+    background-image: linear-gradient(to top , rgb(240, 185, 229) ,rgb(241, 179, 214));
+    color:white;
+
+}
+.header-section {
+    position: fixed;
+    top:0;left: 0; right:0;
+    z-index:1000px;
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+    padding:2rem 9%;
+
+}
+.header-section .logo {
+    font-size:2.5rem;
+    font-weight: bolder;
+    color:(white)
+}
+
+.header-section .logo i{
+    color: cornflowerblue
+}
+.navbar a{
+    text-decoration: none;
+    color:white;
+}
+.navbar a:hover{
+    color: cornflowerblue;
+}
+.mainsection{
+    display: flex;
+    flex-flow: row wrap ;
+    justify-content: space-between;
+    justify-items: center;
+    padding-top:14rem;
+    line-height: 2rem;
+
+   
+}
+.content{
+    flex:2;
+}
+.content h2{
+    font-size: 3rem;
+}
+
+span{
+    color: cornflowerblue;
+}
+.content .box{
+    border:0.1rem solid white;
+    display: inline-block;
+    border-radius: 5%;
+    padding: 10px 20px;
+    margin-bottom: 0.75rem;
+
+}
+.content .box a{
+    color: white;
+    text-decoration: none;
+}
+.box:hover{
+    background-color:cornflowerblue;
+    transition: 1s;
+}
+.image{
+    flex:1;
+   width:100%
+}
+.schedule{
+    display: flex;
+}
+td,tr{
+   background-color: rgb(236, 190, 205);
+}
+th{
+    background-color: rgb(143, 181, 250)
+}
+.table{
+width: 80%;
+border-collapse:separate;}
