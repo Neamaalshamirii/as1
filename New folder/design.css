@@ -1,7 +1,11 @@
 body{
     font-family: cursive;
-  background-image: linear-gradient(to top , rgb(240, 185, 229) ,rgb(241, 179, 214));
-    color:white;
+ /* background-image: linear-gradient(to top , rgb(240, 185, 229) ,rgb(241, 179, 214));*/
+    color:rgb(15, 11, 11);
+
+}
+.container{
+      background-image: linear-gradient(to top , rgb(240, 185, 229) ,rgb(241, 179, 214));
 
 }
 .header-section {
@@ -25,7 +29,7 @@ body{
 }
 .navbar a{
     text-decoration: none;
-    color:white;
+    color:rgb(28, 21, 21);
 }
 .navbar a:hover{
     color: cornflowerblue;
@@ -51,7 +55,7 @@ span{
     color: cornflowerblue;
 }
 .content .box{
-    border:0.1rem solid white;
+    border:0.1rem solid rgb(158, 131, 193);
     display: inline-block;
     border-radius: 5%;
     padding: 10px 20px;
@@ -59,7 +63,7 @@ span{
 
 }
 .content .box a{
-    color: white;
+    color: rgb(20, 21, 27);
     text-decoration: none;
 }
 .box:hover{
@@ -143,14 +147,39 @@ text-align: center;
         width:100%
     }
 }
+.resource {
+    padding: 20px;
+    text-align: center; /* Centering the title */
+}
 .resource .cards{
     display: grid;
     grid-template-columns: repeat(auto-fit , minmax(30rem ,1fr));
-    gap: 0.4rem;
+gap:1.5rem
 }
 .card1 , .card2 ,.card3{
-    background-color: aliceblue;
+    background-color:#ecaadb;
     border-radius: 2%;
-    width: 33%;
+    padding: 1rem; /* Spacing inside cards */
+}
+.cards  a{
+    color:rgb(14, 10, 10);
+    text-decoration: none;
+}
+.teacher{
+    display: grid;
+    grid-template-columns: repeat(auto-fit , minmax(30rem , 1fr));
+    gap:0.3rem
     
+}
+.teacher1 ,.teacher2{
+    padding: 3rem;
+    background-color: aliceblue;
+    margin: 4rem;
+    box-sizing: border-box;
+}
+.teacher h3,p{
+    text-align: center;
+}
+.teacher1,.teacher2 img{
+    text-align: center;
 }
