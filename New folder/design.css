@@ -1,185 +1,434 @@
-body{
+/* Base body styling */
+body {
     font-family: cursive;
- /* background-image: linear-gradient(to top , rgb(240, 185, 229) ,rgb(241, 179, 214));*/
-    color:rgb(15, 11, 11);
-
+    color: #0F0B0B;
 }
-.container{
-      background-image: linear-gradient(to top , rgb(240, 185, 229) ,rgb(241, 179, 214));
 
-}
+/* Header Section */
 .header-section {
     position: fixed;
-    top:0;left: 0; right:0;
-    z-index:1000px;
-    display:flex;
-    justify-content:space-between;
-    align-items: center;
-    padding:2rem 9%;
-
-}
-.header-section .logo {
-    font-size:2.5rem;
-    font-weight: bolder;
-    color:(white)
-}
-
-.header-section .logo i{
-    color: cornflowerblue
-}
-.navbar a{
-    text-decoration: none;
-    color:rgb(28, 21, 21);
-}
-.navbar a:hover{
-    color: cornflowerblue;
-}
-.mainsection{
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
     display: flex;
-    flex-flow: row wrap ;
     justify-content: space-between;
-    justify-items: center;
-    padding-top:14rem;
-    line-height: 2rem;
+    align-items: center;
+    padding: 2rem 9%;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+.header-section:hover {
+    background-color: #f0f0f0;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+.header-section .logo:hover i {
+    transform: rotate(360deg);
+}
 
-   
+.header-section .logo {
+    font-size: 2.5rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+
 }
-.content{
-    flex:3;
+.header-section .logo i {
+    color: cornflowerblue;
+    transition: transform 0.3s ease;
 }
-.content h2{
+/* Navbar */
+.navbar a {
+    text-decoration: none;
+    color: #1C1515;
+    padding: 0 15px;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: color 0.3s ease, transform 0.3s ease;
+    position: relative;
+}
+
+.navbar a:hover {
+    color: cornflowerblue;
+    transform: translateY(-3px);
+}
+.navbar a:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background-color: cornflowerblue;
+    transition: width 0.3s, left 0.3s;
+}
+
+.navbar a:hover:before {
+    width: 100%;
+    left: 0;
+}
+/* Main Section */
+.mainsection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    
+    padding-top: 10rem;
+    margin-bottom: 5rem;
+}
+
+.content {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.content h2 {
     font-size: 3rem;
+    position: relative;
 }
 
-span{
+.content p {
+    line-height: 1.8rem;
+    margin-bottom: 2rem;
+    transition: color 0.3s ease;
+}
+
+.content p:hover {
     color: cornflowerblue;
 }
-.content .box{
-    border:0.1rem solid rgb(158, 131, 193);
+
+span {
+    color: cornflowerblue;
+}
+
+.button {
+    border: 0.1rem solid rgb(158, 131, 193);
     display: inline-block;
+    width: 100px;
     border-radius: 5%;
     padding: 10px 20px;
-    margin-bottom: 0.75rem;
-
+    background-color: cornflowerblue;
+    transition: background-color 0.3s, box-shadow 0.3s ease;
 }
-.content .box a{
-    color: rgb(20, 21, 27);
+
+.button:hover {
+    background-color: #3949ab;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.button a {
+    color: #ffffff;
     text-decoration: none;
 }
-.box:hover{
-    background-color:cornflowerblue;
-    transition: 1s;
+
+.image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.image{
-    flex:1;
-    margin-left: 4rem;
-    width:100%
+
+.image img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
-.schedule{
-    margin-bottom: 4rem;
-    margin-top: 5rem;
-}
-table{
+
+/* Table */
+table {
     width: 80%;
-    border-collapse:collapse;
-margin-left: auto;
-margin-right:auto
+    margin: 2rem auto;
+    border-collapse: collapse;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-td,th{
-    padding:0.5rem;
-    text-align: left;
+th, td {
+    padding: 0.75rem;
     background-color: #ecaadb;
-    border:0.1rem solid rgb(190, 219, 228)
+    text-align: left;
+    transition: background-color 0.3s;
 }
-th{
-    background-color: rgb(171, 166, 237);
-}
-.schedule h1{
-    text-align: center;
-    margin-top: 0.5rem;
-}
-/*
-.gallary{
-    display: grid;
-    grid-template-columns: repeat(auto-fit 1fr);
-    gap:0.3rem;
-    margin-left: auto;
-    margin-right: auto;
-}
-.photo1{
-    grid-column: 1/2;
-}
-.photo2{
-    grid-column: 2/3;
-}
-.photo3{
-    grid-column: 3/4;
 
+th {
+    background-color: #ABA6ED;
 }
-.gallary h1{
-grid-column: 1/4;
-justify-self: center;
+
+td:hover {
+    background-color: #d1c4e9;
 }
-*/
-/*using flex*/
-.gallary{
-    display:flex;
-    justify-content: space-between;
+
+/* Gallery */
+.gallery .photos-container {
+    display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.gallery .photos-container img {
+    width: 20%;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.gallery .photos-container img:hover {
+    transform: scale(1.1);
+}
+
+.resource {
+    padding: 2rem;
+    text-align: center;
+}
+
+/* Cards */
+.cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.card {
+    background-color: #ecaadb;
+    padding: 1rem;
+    border-radius: 8px;
+    width: 90%;
+    text-align: center;
+    transition: background-color 0.3s, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    background-color: #d4a5c9;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card i {
+    font-size: 2rem;
+    transition: color 0.3s ease;
+}
+
+.card i:hover {
+    color: cornflowerblue;
+}
+
+/* Teachers */
+.teacher-grid {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.teacher-card {
+    text-align: center;
+    padding: 1rem;
+    border-radius: 10px;
+    transition: box-shadow 0.3s ease;
+}
+
+.teacher-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.teacher-card img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+}
+
+.teacher-card img:hover {
+    transform: scale(1.05);
+}
+
+.teacher-card .social i {
+    font-size: 1.5rem;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.teacher-card .social i:hover {
+    color: cornflowerblue;
+}
+
+  /* Base head font styling */
+h1 {
+      font-size: 3rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+    
+   h2 {
+        font-size: 2.5rem;
+    }
+
+    /* Footer */
+.footer-section {
+    background-color: #ecaadb;
+    color: #fff;
+    padding: 1.5rem 9%;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.footer-section:hover {
+    background-color: #d4a5c9;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.footer-container p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.social-icons a {
+    text-decoration: none;
+    color: #fff;
+    margin: 0 10px;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: cornflowerblue;
+}
+
+
+/* Media query for screens between 768px (Tablet view) */
+@media (max-width: 768px) {
+     /* Base head font styling */
+    h1 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.8rem;
+    }
+    
+    .header-section {
+        padding: 1rem;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .mainsection {
+        margin-top: 4rem;
+    }
+    
+    .content h2 {
+        font-size: 1.5rem;
+        line-height: 2rem;
+        text-align: center;
+    }
+
+    .content p {
+        font-size: 0.9rem;
+        max-width: 90%;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .content .button {
+        text-align: center;
+        margin: 0 auto;
+        display: block;
+    }
+
+    
+
+    table {
+        width: 100%;
+        font-size: 0.9rem;
+    }
+
+    .gallery .photos-container img {
+        /* width: 150px; */
+        width: 45%;
+    }
+
+    .mainsection {
+        padding-top: 4rem;
+    }
+
+    .teacher-card img {
+        width: 200px;
+        height: 200px;
+    }
+    .footer-section {
+        padding: 1rem;
+    }
+
+    .social-icons a {
+        font-size: 1.2rem;
+        margin: 0 5px;
+    }
+}
+
+/* Media query for screens smaller than 400px (mobile view) */
+@media (max-width: 400px) {
+
+    /* Base head font styling */
+    h1 {
+        font-size: 1.5rem;
+    }
+    
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    /* Header Section */
+    
+    .header-section {
+        padding: 0.5rem;
+        text-align: center;
+    }
+        /* Main Section */
+    .mainsection {
+        display: flex;
+        justify-content: space-between;
+        
+        padding-top: 5rem;
+        margin-bottom: 5rem;
+    }
+
+    
+
+    .content h2 {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    .content p {
+        font-size: 0.8rem;
+        max-width: 95%;
+        margin: 0 auto;
+    }
+
+    .button {
+        padding: 5px 10px;
+    }
+        /* Gallery */
+    .gallery .photos-container img {
+        width: 100%;
+    }
+    /* Teacher Cards */
+    .teacher-card img {
+        width: 120px;
+        height: 120px;
+    }
 
 }
-.gallary h1{
-    width: 100%;
-align-content: center;
-text-align: center;
-}
-.gallary img{
-    width: 33%;
-}
-@media (max-width:768px){
-    .gallary img{
-        width:47%;
-    }
-}
-@media (max-width:400px){
-    .gallary img{
-        width:100%
-    }
-}
-.resource {
-    padding: 20px;
-    text-align: center; /* Centering the title */
-}
-.resource .cards{
-    display: grid;
-    grid-template-columns: repeat(auto-fit , minmax(30rem ,1fr));
-gap:1.5rem
-}
-.card1 , .card2 ,.card3{
-    background-color:#ecaadb;
-    border-radius: 2%;
-    padding: 1rem; /* Spacing inside cards */
-}
-.cards  a{
-    color:rgb(14, 10, 10);
-    text-decoration: none;
-}
-.teacher{
-    display: grid;
-    grid-template-columns: repeat(auto-fit , minmax(30rem , 1fr));
-    gap:0.3rem
-    
-}
-.teacher1 ,.teacher2{
-    padding: 3rem;
-    background-color: aliceblue;
-    margin: 4rem;
-    box-sizing: border-box;
-}
-.teacher h3,p{
-    text-align: center;
-}
-.teacher1,.teacher2 img{
-    text-align: center;
-}
+

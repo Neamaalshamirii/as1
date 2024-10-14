@@ -1,123 +1,147 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>sunshine  </title>
-         <link rel="stylesheet" href="design.css">
-
-    </head>
-    <body>
-        <div class="container">
-
-            <header class="header-section">
-                <a href="#" class="logo"><i class="fas fa-school"> kindergarten</i></a>
-                
-               
-                <nav class="navbar">
-                    <a  href="#">Home</a>
-                    <a  href="#">About</a>
-                    <a  href="#">Education</a>
-                    <a   href="#">Teacher</a>
-                    <a  href="#">Gallery</a> 
-                 </nav>
-            </header>
-            <main class="mainsection">
-                <div class="content">
-                    <h2>Welcome To Our <span>kindergarten</span></h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                        Laboriosam voluptatibus tempora pariatur fugiat quibusdam explicabo similique nulla fugit ut consequatur.</p>
-                        <div class="box"><a href="#">Read More</a></div>
-                </div>
-                <div class="image">
-                    <img src="images/image1.jpeg">
-                </div>            </main>
-
-                <section class="schedule">
-                    <h1>Weekly <span>schedule</span></h1>
-                      <table border="1">
-                          <!-- Table Header -->
-                          <thead>
-                            <tr>
-                              <th>Day</th>
-                              <th>Morning Activities</th>
-                              <th>Afternoon Activities</th>
-                            </tr>
-                          </thead>
-                          <!-- Table Body -->
-                          <tbody>
-                            <tr>
-                              <td>Monday</td>
-                              <td>Arts and Crafts</td>
-                              <td>Outdoor Play</td>
-                            </tr>
-                            <tr>
-                              <td>Tuesday</td>
-                              <td>Story Time</td>
-                              <td>Music and Dance</td>
-                            </tr>
-                            <tr>
-                              <td>Wednesday</td>
-                              <td>Math Games</td>
-                              <td>Science Experiments</td>
-                            </tr>
-                            <tr>
-                              <td>Thursday</td>
-                              <td>Language Lessons</td>
-                              <td>Sports Activities</td>
-                            </tr>
-                            <tr>
-                              <td>Friday</td>
-                              <td>Field Trip</td>
-                              <td>Group Art Project</td>
-                            </tr>
-                          </tbody>
-                        </table>
-                        
-                         
-                  </section>
-          <!--start of gallary section-->
-<div class="gallary">
-  <h1>Our <span>Gallary</span></h1>
-  <img class="photo1" src="images/photo1.jpeg" alt="activiy1">
-  <img class="photo2" src="images/photo2.jpeg" alt="activiy2">
-  <img class="photo3" src="images/photo3.jpeg" alt="activiy3">
-  <img src="images/photo4.jpeg" alt="activiy4">
-  <img src="images/photo5.jpeg" alt="activiy5">
-  <img src="images/photo6.jpeg" alt="activiy6">
-
-
-</div>
-<!--end of the gallary section-->
-<!--start of the parent resources-->
-<div class="resource">
-  <h1>Parent <span>Resources</span></h1>
-  <div class="cards">
-  <div class="card1">
-     <a href="#" target="_blank"><i class="fa-solid fa-calendar"></i><h2>School Events</h2> <!--to make cards clickable-->
-      <p> View important dates and events for the school year in one easy place.</p>
-    </a> 
-    </div>
-    <div class="card2">
-      <a href="#" target="_blank"><i class="fas fa-book"></i><h2> Parent Handbook</h2>
-      <p>Download the full guide to school policies, procedures, and expectations.</p>
-    </a>
-    </div>
+<html lang="en">
     
-  </div>
-</div>
-<div class="teacher-section ">
-  <h1>Our <span>Teachers</span></h1>
-</div>
-  <div class="teacher">
-  <div class="teacher1">
-    <img src="images/Teacher1.jpg"><h3>Jassem Khalid</h3> <p>instructer</p><a href="#"><i class="fab fa-instagram"></i></a><a href=""><i class="fas fa-phone-alt"></i></a>
-  </div>
-  <div class="teacher2">
-    <img src="images/Teacher2.jpg"><h3>Neama Alshamiri</h3> <p>instructer</p><a href="#"><i class="fab fa-instagram"></i></a><a href=""><i class="fas fa-phone-alt"></i></a>
-</div>
-</div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="design.css">
+    <title>Sunshine Kindergarten</title>
+</head>
+
+
+<body class="container">
+    <!-- Header Section -->
+    <header class="header-section">
+        <a href="#" class="logo"><i class="fas fa-school"></i> Kindergarten</a>
+        <!-- navigation menu -->
+        <nav class="navbar">
+            <a href="#">Home</a>
+            <a href="#schedule">Schedule</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#teacher">Teacher</a>
+            
+        </nav>
+    </header>
+
+    <!-- Main Section -->
+    <main class="mainsection">
+        <div class="content">
+            <h2>Welcome To Our <span>Kindergarten</span></h2>
+            <p>We're excited to have you with us. Our warm, creative environment helps children learn, grow, and thrive. Let's make wonderful memories together!</p>
+            <div class="button"><a href="#">Read More</a></div>
         </div>
-    </body>
+        <div class="image">
+            <img src="images/image1.jpeg" alt="Kindergarten Image">
+        </div>
+    </main>
+            <!-- Schedule Table section -->
+    <section class="schedule" id="schedule">
+        <h1>Weekly <span>Schedule</span></h1>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Day</th>
+                    <th>Morning Activities</th>
+                    <th>Afternoon Activities</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Monday</td>
+                    <td>Arts and Crafts</td>
+                    <td>Outdoor Play</td>
+                </tr>
+                <tr>
+                    <td>Tuesday</td>
+                    <td>Story Time</td>
+                    <td>Music and Dance</td>
+                </tr>
+                <tr>
+                    <td>Wednesday</td>
+                    <td>Math Games</td>
+                    <td>Science Experiments</td>
+                </tr>
+                <tr>
+                    <td>Thursday</td>
+                    <td>Language Lessons</td>
+                    <td>Sports Activities</td>
+                </tr>
+                <tr>
+                    <td>Friday</td>
+                    <td>Field Trip</td>
+                    <td>Group Art Project</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+        <!-- Gallery section -->
+    <section class="gallery" id="gallery">
+        <h1>Our <span>Gallery</span></h1>
+        <div class="photos-container">
+            <img src="images/photo1.jpeg" alt="Activity 1" class="photo1">
+            <img src="images/photo2.jpeg" alt="Activity 2" class="photo2">
+            <img src="images/photo3.jpeg" alt="Activity 3" class="photo3">
+            <img src="images/photo4.jpeg" alt="Activity 4">
+        </div>
+    </section>
+    <!-- Resource section -->
+    <section class="resource">
+        <h1>Parent <span>Resources</span></h1>
+        <div class="cards">
+            <div class="card">
+                <a href="#" target="_blank"><i class="fa-solid fa-calendar"></i>
+                    <h2>School Events</h2>
+                    <p>View important dates and events for the school year in one easy place.</p>
+                </a>
+            </div>
+            <div class="card">
+                <a href="#" target="_blank"><i class="fas fa-book"></i>
+                    <h2>Parent Handbook</h2>
+                    <p>Download the full guide to school policies, procedures, and expectations.</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Teacher section -->
+    <section class="teacher-section" id="teacher">
+        <h1>Our <span>Teachers</span></h1>
+        <div class="teacher-grid">
+            <div class="teacher-card">
+                <img src="images/Teacher1.jpg" alt="Teacher Jassem Alkhalldi">
+                <h3>Jassem Alkhalldi</h3>
+                <p>Instructor</p>
+                <div class="social">
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-facebook"></i>
+                    <i class="fab fa-twitter"></i>
+                </div>
+            </div>
+            <div class="teacher-card">
+                <img src="images/Teacher2.jpg" alt="Teacher Neama Alshamiri">
+                <h3>Neama Alshamiri</h3>
+                <p>Instructor</p>
+                <div class="social">
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-facebook"></i>
+                    <i class="fab fa-twitter"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer section -->
+    <footer class="footer-section" id="footer">
+        <div class="footer-container">
+            <p>&copy; 2024 Kindergarten. All rights reserved.</p>
+            <div class="social-icons">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+</body>
 </html>
